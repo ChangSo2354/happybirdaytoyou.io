@@ -1,0 +1,149 @@
+body {
+    background-color: whitesmoke;
+}
+
+.body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.birdayCard {
+    border-radius: 30px;
+    position: relative;
+    width: 420px;
+    height: 500px;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    transform: perspective(2000px);
+    transition: 1s;
+}
+
+.cardFront {
+    position: relative;
+    background-color: #fefefe;
+    width: 420px;
+    height: 500px;
+    border-radius: 0 15px 0;
+    overflow: hidden;
+    transform-origin: left;
+    box-shadow: inset 100px 20px 100px rgba(118, 118, 118, 0.2), 30px 0 50px rgba(118, 118, 118, 0.21);
+    transition: 0.6s;
+}
+
+.happy {
+    width: 140px;
+    height: auto;
+    top: 5%;
+    transform: rotate(-30deg);
+    position: absolute;
+    z-index: 4;
+}
+
+.balloons {
+    position: absolute;
+    width: 170px;
+    height: auto;
+    right: -10px;
+    top: 30px;
+}
+
+
+
+.jessImg {
+    display: flex;
+    position: absolute;
+    bottom: 80px;             
+    left: 50%;                
+    transform: translateX(-50%);
+    width: 250px;             
+    height: auto;             
+    max-width: 100%;          
+    z-index: 1;
+    background-image: none !important; 
+}
+
+
+
+
+
+
+
+.heapy {
+    text-align: center;
+    left: 10%;
+    top: 84%;
+    font-size: 1.5em;
+    font-family: Tahoma, sans-serif;
+    color: hotpink;
+    position: absolute;
+    transition: 0.1s;
+    z-index: 6;
+}
+
+.cardInside {
+    position: absolute;
+    background-color: #fefefe;
+    width: 420px;
+    height: 500px;
+    z-index: -1;
+    left: 0;
+    border-radius: 0 15px 15px 0;
+    top: 0;
+    box-shadow: inset 100px 20px 100px rgba(191, 190, 190, 0.2);
+    padding: 30px; /* Adds padding to the inside of the card */
+    box-sizing: border-box; /* Ensures padding is included in the size calculation */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardInside h3 {
+    font-family: Tahoma, sans-serif;
+    color: #333;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.cardInside p {
+    line-height: 1.6;
+    margin: 15px 0;
+    color: #333;
+    font-size: 1.1em;
+    text-align: center; /* Center-aligns the text */
+    font-family: Arial, sans-serif; /* Sets a readable font */
+}
+
+.cardInside p:last-child {
+    margin-bottom: 0; /* Removes extra bottom margin from last paragraph */
+}
+
+.back {
+    font-family: Tahoma, sans-serif;
+    color: #333;
+    text-align: center;
+    margin: 30px;
+}
+
+.birdayCard:hover {
+    transform: perspective(2500px) rotate(5deg);
+    box-shadow: inset 100px 20px 100px rgba(116, 115, 0.5), 0 10px 100px rgba(116, 115, 115, 0.5);
+}
+
+.birdayCard:hover .cardFront {
+    transform: rotateY(-160deg);
+}
+
+.birdayCard:hover .heapy {
+    visibility: hidden;
+}
+
+/* Hide only the audio controls but keep the audio playing in the background */
+audio {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+}
